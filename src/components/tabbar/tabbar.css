@@ -1,0 +1,15 @@
+.TabBar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f6f6f6;
+}
+
+.TabBar div{
+  flex: 1;
+  text-align: center;
+  height: 49px;
+  font-size: 14px;
+}
