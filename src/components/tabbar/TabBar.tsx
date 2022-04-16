@@ -1,6 +1,12 @@
 import styles from './tabbar.css';
 import { history } from 'umi';
 import { useState } from 'react';
+import {
+  AppstoreOutline,
+  KoubeiOutline,
+  TagOutline,
+  TeamFill,
+} from 'antd-mobile-icons';
 
 export default function TabBar(props: any) {
   const [active, setactive] = useState('/home');
@@ -9,11 +15,21 @@ export default function TabBar(props: any) {
     setactive(url);
   };
   const tabPath = ['/home', '/category', '/cart', '/profile'];
-  const tabName = {
+
+  //Record:定义对象键和值的类型，以便于提取
+  type stringKey = Record<string, string>;
+  const tabNames: stringKey = {
     home: '首页',
     category: '分类',
     cart: '购物车',
     profile: '我的',
+  };
+  type stringKeyIcon = Record<string, any>;
+  const tabIcons: stringKeyIcon = {
+    home: <AppstoreOutline />,
+    category: <KoubeiOutline />,
+    cart: <TagOutline />,
+    profile: <TeamFill />,
   };
 
   return (
@@ -25,8 +41,12 @@ export default function TabBar(props: any) {
               goTopage(item);
             }}
             style={{ color: 'red' }}
+            key={item}
           >
-            {tabName[item.substr(1)]}
+            {tabNames[item.substr(1)]}
+            <div style={{ fontSize: 27 }} key={tabIcons[item.substr(1)]}>
+              {tabIcons[item.substr(1)]}
+            </div>
           </div>
         ) : (
           <div
@@ -34,7 +54,10 @@ export default function TabBar(props: any) {
               goTopage(item);
             }}
           >
-            {tabName[item.substr(1)]}
+            {tabNames[item.substr(1)]}
+            <div style={{ fontSize: 27 }} key={tabIcons[item.substr(1)]}>
+              {tabIcons[item.substr(1)]}
+            </div>
           </div>
         );
       })}

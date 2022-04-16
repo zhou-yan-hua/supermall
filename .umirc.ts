@@ -24,7 +24,11 @@ export default defineConfig({
   ],
   fastRefresh: {},
   mfsu: {},
+  // 配置路由模式
   // history: {
   //   type: 'hash'
   // },
+
+  // 关闭自带的antd，使用自己下载的最新的
+  antd: false,
 });

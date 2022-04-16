@@ -1,10 +1,11 @@
-import styles from './index.less';
 import TabBar from '@/components/tabbar/TabBar';
+// 引入初始化样式
+import '../assets/css/normalize.css';
+
 export default function IndexPage(props: any) {
-  console.log(props);
   return (
     <div>
-      <div style={{ padding: 20 }}>{props.children}</div>
+      <div>{props.children}</div>
       <TabBar />
     </div>
   );
