@@ -1,0 +1,11 @@
+.dtTabbar{
+  display: flex;
+  padding: 20px 30px 20px 26px;
+}
+.tbItem{
+  flex: 1;
+}
+a {
+    color: #666 !important;
+    text-decoration: none;
+}

@@ -5,6 +5,7 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
+    { path: '/detail/:iid?', exact: true, component: '@/pages/detail/Detail' },
     {
       path: '/',
       component: '@/pages/index',
@@ -20,14 +21,13 @@ export default defineConfig({
         },
       ],
     },
-    { path: '/home', exact: true, component: '@/pages/home/Home' },
   ],
   fastRefresh: {},
   mfsu: {},
   // 配置路由模式
-  // history: {
-  //   type: 'hash'
-  // },
+  history: {
+    type: 'hash',
+  },
 
   // 关闭自带的antd，使用自己下载的最新的
   antd: false,

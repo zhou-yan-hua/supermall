@@ -53,6 +53,7 @@ export default function TabBar(props: any) {
             onClick={() => {
               goTopage(item);
             }}
+            key={item}
           >
             {tabNames[item.substr(1)]}
             <div style={{ fontSize: 27 }} key={tabIcons[item.substr(1)]}>

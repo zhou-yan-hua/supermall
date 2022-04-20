@@ -14,3 +14,8 @@
   下载最新的antd库   cnpm i --save antd-mobile@next
   禁用umi自带的antd库
   ```
+- 4.17操作
+  ```
+  新建models文件夹，符合umi.js集成dva规则，创建文件。
+  下载axios 封装在network文件夹下
+  ```

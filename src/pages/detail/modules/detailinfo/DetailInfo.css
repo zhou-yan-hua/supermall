@@ -1,0 +1,58 @@
+.title{
+  margin: 15px 5px 10px 5px ;
+  font-size: 16px;
+}
+
+.price{
+  position:relative ;
+  height: 40px;
+  margin: 0 5px 0 5px;
+}
+
+.price span:nth-child(1){
+  font-size: 30px;
+  line-height: 40px;
+  color: deeppink;
+}
+
+.price span:nth-child(2){
+  font-size: 13px;
+  line-height: 40px;
+  color: rgb(162,162,162);
+  text-decoration:line-through
+}
+.price div{
+  height: 25px;
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  border-radius: 15px;
+  position:absolute;
+  padding-top: 2px;
+  background-color: deeppink;
+  left: 125px;
+  top: 4px;
+}
+
+.infomation{
+  display: flex;
+  padding: 15px 5px 15px 5px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(153,153,153);
+}
+
+.infomation div:nth-child(2){
+  flex: 1;
+  text-align: center;
+}
+.infomation div:nth-child(1){
+  flex: 1;
+  text-align: left;
+}
+.infomation div:nth-child(3){
+  flex: 1;
+  text-align: right;
+}
+
+
